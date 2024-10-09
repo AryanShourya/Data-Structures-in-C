@@ -1,3 +1,16 @@
-#Data Structures in C 
+# Data Structures in C
 
-This repo contains my custom made header file for using data structures in C.
+This repo contain a custom header files for data structures in C.
+
+Why C?
+
+C is a low level programming language and it does not have its own data structures library. Through this project, we will learn how data structures work and how to implement them from scratch.
+
+
+## Content Table
+
+- [Stack]()
+- [Queue]()
+- [Priority queue]()
+- [Linked List]()
+
