@@ -4,6 +4,7 @@
 
 ![stack structure](https://github.com/AryanShourya/Data-Structures-in-C/raw/main/Stack/pictures/stack_struct_new.png)
 structure of stack used in this header file
+
 ## Deploying `stack.h`
 
 - create a C file eg: `file_name.c`
