@@ -2,7 +2,7 @@
 
 # Stacks
 
-![stack structure](pictures\stack_struct_new.png)
+![stack structure](https://github.com/AryanShourya/Data-Structures-in-C/raw/main/Stack/pictures/stack_struct_new.png)
 structure of stack used in this header file
 ## Deploying `stack.h`
 
@@ -51,6 +51,16 @@ If you want to create stack that contains other data types then you can refer to
 
 > This header file contains functions for above mentioned data types only. No user defined data types or string is allowed.
 
+To insert value into the stack according to correct datatype refer to this table :
+
+
+| Data Type | Function |
+|:-----------|:----------|
+|integer     |push_int(stack name , value);|
+|float       |push_float(stack name , value);|
+|double      |push_double(stack name , value);|
+|character | push_char(stack name , value);|
+
 For every datatype the function to fetch the top value is different :
 
 
@@ -67,7 +77,7 @@ For every datatype the function to fetch the top value is different :
 - to _successfully_ run the program we need to compile `file_name.c` along with `stack.c`.
 - open `terminal` and write the following commands:
     ```
-    gcc file_name.c stack_int.c -o file_name.c
+    gcc file_name.c stack.c -o file_name.c
     ```
     This will create a `file_name.exe` executable file in the same directory
 - to run the program:
