@@ -1,5 +1,5 @@
-#ifndef STACK_INT_H
-#define STACK_INT_H
+#ifndef STACK_H
+#define STACK_H
 // This header file includes file to implement stack in c program files.
 
 

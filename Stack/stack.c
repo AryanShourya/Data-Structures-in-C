@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<conio.h>
-#include"stack_int.h"
+#include"stack.h"
 enum dataflag{
     i,
     f,
