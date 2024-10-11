@@ -17,7 +17,7 @@ structure of stack used in this header file
 Basic operations of integer containing stack : 
 - create_stack()
     ```c
-    stack s1 = create_stack('i',5);   // create an integer stack s1 of size = 5
+    stack *s1 = create_stack('i',5);   // create an integer stack s1 of size = 5
     ```
 - push_int()
     ```c
