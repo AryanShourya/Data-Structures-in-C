@@ -2,7 +2,7 @@
 
 # Stacks
 
-![stack structure](pictures\stack_struct_new.png)
+![stack structure](Stack/pictures/stack_struct_new.png)
 structure of stack used in this header file
 ## Deploying `stack.h`
 
