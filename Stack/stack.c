@@ -3,13 +3,17 @@
 #include<stdlib.h>
 #include<conio.h>
 #include"stack.h"
+
+// enum to store the data type of stack
 enum dataflag{
-    i,
-    f,
-    d,
-    c 
+    i,   // integer
+    f,   // float
+    d,  //  double
+    c    // character
 };
-struct stack_int{
+
+
+struct stack{
     void* arr;
     dataflag df;
     int size;
@@ -17,10 +21,10 @@ struct stack_int{
     int topindx;
 };
 
-stack_int* create_stack(char c,int s)
+stack* create_stack(char c,int s)
 {
     // use dynamic memory allocation to allocate memory for stack struct.
-    stack_int *s1= (stack_int*)malloc(sizeof(stack_int)*1);
+    stack *s1= (stack*)malloc(sizeof(stack)*1);
     //set capacity to s . 
     s1->capacity=s;
     // set current size of stack to 0.
@@ -54,19 +58,19 @@ stack_int* create_stack(char c,int s)
 }
 
 // Returns True if the stack is full
-int isFull(stack_int* s1 )
+int isFull(stack* s1 )
 {
     return s1->size==s1->capacity;
 }
 
 // returns True if stack is empty
-int isEmpty(stack_int* s1)
+int isEmpty(stack* s1)
 {
     return s1->size==0;
 }
 
 //returns the top integer element of the stack
-int top_int(stack_int* s1)
+int top_int(stack* s1)
 {
     if(isEmpty(s1))
     {
@@ -89,7 +93,7 @@ int top_int(stack_int* s1)
 }
 
 // returns top float of the stack
-float top_float(stack_int* s1)
+float top_float(stack* s1)
 {
     if(isEmpty(s1))
     {
@@ -106,7 +110,7 @@ float top_float(stack_int* s1)
     return ((float*)s1->arr)[s1->topindx];
 }
 
-double top_double(stack_int* s1)
+double top_double(stack* s1)
 {
     if(isEmpty(s1))
     {
@@ -123,7 +127,7 @@ double top_double(stack_int* s1)
     return ((double*)s1->arr)[s1->topindx];
 }
 
-char top_char(stack_int* s1)
+char top_char(stack* s1)
 {
     if(isEmpty(s1))
     {
@@ -141,7 +145,7 @@ char top_char(stack_int* s1)
 }
 
 //function to insert integer into the stack
-void push_int(stack_int *s1,int n)
+void push_int(stack *s1,int n)
 {
     if(s1->df!=0)
     {
@@ -160,7 +164,7 @@ void push_int(stack_int *s1,int n)
 }
 
 // function to insert flaot in stack
-void push_float(stack_int *s1,float n)
+void push_float(stack *s1,float n)
 {
     if(s1->df!=1)
     {
@@ -178,7 +182,7 @@ void push_float(stack_int *s1,float n)
 }
 
 // push double element into the stack
-void push_double(stack_int *s1,double n)
+void push_double(stack *s1,double n)
 {
     if(s1->df!=2)
     {
@@ -197,7 +201,7 @@ void push_double(stack_int *s1,double n)
 }
 
 // push character element into the stack
-void push_char(stack_int *s1,char n)
+void push_char(stack *s1,char n)
 {
     if(s1->df!=3)
     {
@@ -216,7 +220,7 @@ void push_char(stack_int *s1,char n)
 }
 
 //function to delete element from stack
-void pop(stack_int* s1)
+void pop(stack* s1)
 {
     if(isEmpty(s1))
     {
@@ -229,7 +233,7 @@ void pop(stack_int* s1)
 }
 
 // delete the entire stack
-void free_stack(stack_int* s1)
+void free_stack(stack* s1)
 {
     free(s1->arr);
     free(s1);
