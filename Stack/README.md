@@ -2,6 +2,10 @@
 
 # Stacks
 
+Stack Data Structure is a linear data structure that follows LIFO (Last In First Out) Principle , so the last element inserted is the first to be popped out.[^1]
+
+[^1]:Definition taken from geekforgeeks official website. Check them out [here](https://www.geeksforgeeks.org/introduction-to-stack-data-structure-and-algorithm-tutorials/).
+
 ![stack structure](https://github.com/AryanShourya/Data-Structures-in-C/raw/main/Stack/pictures/stack_struct_new.png)
 
 structure of stack used in this header file
