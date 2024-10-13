@@ -6,7 +6,9 @@ Queue is a linear data structure that follows the First-In-First-Out (FIFO) orde
 
 ![queue structure](https://github.com/AryanShourya/Data-Structures-in-C/raw/main/queue/pictures/queue_basic.png)
 
+
 This library uses linked list to implement queue data structure.
+
 
 ![linked list representation queue](https://github.com/AryanShourya/Data-Structures-in-C/raw/main/queue/pictures/queue_ll_represent.png)
 
@@ -14,10 +16,10 @@ This library uses linked list to implement queue data structure.
 ## Using "queue.h" header file
 
 - store both files `queue.h` and `queue.c` int the same folder
-- create file `filename.c` in the same folder as above mentioned files
-- include the header file `queue.h` in `filename.c`
+- create file `file_name.c` in the same folder as above mentioned files
+- include the header file `queue.h` in `file_name.c`
   ```c
-  #include"queue.c"
+  #include"queue.h"
   ```
 - create your own queue using the functions in  the header file
 
@@ -77,15 +79,15 @@ This library uses linked list to implement queue data structure.
 
 ## compiling and running files
 
-- make sure `queue.h` , `queue.c` and your file `filename.c` is in the same directory.
+- make sure `queue.h` , `queue.c` and your file `file_name.c` is in the same directory.
 - open `terminal` and write the commands :
-    - to compile `queue.c` and `filename.c` file into `.exe` file:
+    - to compile `queue.c` and `file_name.c` file into `.exe` file:
         ```
-        gcc queue.c filename.c -o filename
+        gcc queue.c file_name.c -o file_name
         ```
-    - `filename.exe` file will be generated, run this command to execute the program to get the desired output :
+    - `file_name.exe` file will be generated, run this command to execute the program to get the desired output :
         ```
-        ./filename.c
+        ./file_name.c
         ```
 
 >This header file contains functions for only four data types.
