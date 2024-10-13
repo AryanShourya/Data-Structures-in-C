@@ -9,8 +9,8 @@ C is a low level programming language and it does not have its own data structur
 
 ## Content Table
 
-- [Stack]()
-- [Queue]()
+- [Stack](https://github.com/AryanShourya/Data-Structures-in-C/tree/main/Stack)
+- [Queue](https://github.com/AryanShourya/Data-Structures-in-C/tree/main/queue)
 - [Priority queue]()
 - [Linked List]()
 
