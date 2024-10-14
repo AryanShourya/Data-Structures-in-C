@@ -49,6 +49,7 @@ void create_slist(char x)
     return s1;
 }
 
+// function to insert integer element into the list
 void insert_slist_int(slist* s1,int val,int pos)
 {
     if(s1->df!=0)
@@ -65,6 +66,63 @@ void insert_slist_int(slist* s1,int val,int pos)
         return;
     }
 
-    
+    node* ptr=NULL;
+    ptr=s1->head;
 
+    while(pos!=0)
+    {
+        ptr=ptr->next;
+        pos--;
+    }
+
+    if(ptr==NULL)
+    {
+        printf("pos not available!\n");
+        return;
+    }
+
+    node* newNode=malloc(sizeof(node));
+    *(int*)(newNode->data)= val;
+    newNode->next = ptr->next;
+    ptr->next=newNode;
 }
+
+
+// function to display list
+void disp_slist(slist* s1 )
+{
+    if(s1->head==NULL)
+    {
+        printf("NULL\n");
+        return;
+    }
+    node* ptr=NULL;
+    ptr = s1->head;
+
+    while(ptr!=NULL)
+   { 
+    switch (s1->df){
+        case 0:
+        printf("%d ",*(int*)(s1->data));
+        break;
+        case 1:
+        printf("%f ",*(float*)(s1->data));
+        break;
+
+        case 2:
+        printf("%lf ",*(double*)(s1->data));
+        break;
+
+        case 3:
+        printf("%c ",*(char*)(s1->data));
+
+        default:
+        return;
+       }
+
+       ptr=ptr->next;
+    }
+    printf("NULL\n");
+}
+
+// 
