@@ -74,9 +74,130 @@ void insert_slist_int(slist* s1,int val,int pos)
         *(int*)(newNode->data)= val;
         newNode->next=s1->head;
         s1->head=newNode;
+       // printf("head");
+        return;
+    }
+
+    pos--;
+    node* prev=NULL;
+    node* ptr=NULL;
+    ptr=s1->head;
+
+    while(pos!=0 && ptr!=NULL)
+    {
+        prev=ptr;
+        //printf("%d ",*(int*)prev->data);
+        ptr=ptr->next;
+        pos--;
+    }
+
+    if(ptr==NULL)
+    {
+        printf("pos not available!\n");
+        return;
+    }
+
+    node* newNode=malloc(sizeof(node));
+    newNode->data=(int*)malloc(sizeof(int));
+    *(int*)(newNode->data)= val;
+    newNode->next = ptr->next;
+    ptr->next=newNode;
+}
+
+// function to insert float data type
+void insert_slist_float(slist* s1,float val,int pos)
+{
+    if(s1->df!=1)
+    {
+        printf("Invalid data type!\n");
+        return;
+    }
+
+    if(s1->head==NULL)
+    {
+        s1->head= (node*)malloc(sizeof(node));
+        s1->head->data= (float*)malloc(sizeof(float));
+        *(float*)(s1->head->data)= val;
+        s1->head->next=NULL;
+        return;
+    }
+
+    if(pos==0)
+    {
+        node* newNode=malloc(sizeof(node));
+        newNode->data=(float*)malloc(sizeof(float));
+        *(float*)(newNode->data)= val;
+        newNode->next=s1->head;
+        s1->head=newNode;
         printf("head");
         return;
     }
+
+    pos--;
+    node* ptr=NULL;
+    ptr=s1->head;
+    node* prev=NULL;
+    while(pos!=0 && ptr!=NULL)
+    {
+        prev=ptr;
+       // printf("%f ",prev->data);
+        ptr=ptr->next;
+        pos--;
+    }
+
+
+    // I have handled the case of inserting at the end 
+    if( pos!=0 && ptr==NULL)
+    {
+        printf("pos not available!\n");
+        return;
+    }
+    else if(ptr==NULL && pos==0){
+        node* newNode=malloc(sizeof(node));
+        newNode->data=(float*)malloc(sizeof(float)); // it is working fine so anyways
+        *(float*)(newNode->data)= val;
+        prev->next=newNode;
+        newNode->next=NULL;
+        return;
+    }
+
+    node* newNode=malloc(sizeof(node));
+    newNode->data=(float*)malloc(sizeof(float));
+    *(float*)(newNode->data)= val;
+    newNode->next = ptr->next;
+    ptr->next=newNode;
+}
+
+// function to insert double data type
+void insert_slist_double(slist* s1,double val,int pos)
+{
+    if(s1->df!=2)
+    {
+        printf("Invalid data type!\n");
+        return;
+    }
+
+    if(s1->head==NULL)
+    {
+        s1->head= (node*)malloc(sizeof(node));
+        s1->head->data= (double*)malloc(sizeof(double));
+        *(double*)(s1->head->data)= val;
+        s1->head->next=NULL;
+        return;
+    }
+
+    if(pos==0)
+    {
+        node* newNode=malloc(sizeof(node));
+        newNode->data=(double*)malloc(sizeof(double));
+        *(double*)(newNode->data)= val;
+        newNode->next=s1->head;
+        s1->head=newNode;
+        printf("head");
+        return;
+    }
+
+    pos--;
     node* ptr=NULL;
     ptr=s1->head;
 
@@ -93,8 +214,60 @@ void insert_slist_int(slist* s1,int val,int pos)
     }
 
     node* newNode=malloc(sizeof(node));
-    newNode->data=(int*)malloc(sizeof(int));
-    *(int*)(newNode->data)= val;
+    newNode->data=(double*)malloc(sizeof(double));
+    *(double*)(newNode->data)= val;
+    newNode->next = ptr->next;
+    ptr->next=newNode;
+}
+
+// function to insert char data type
+void insert_slist_char(slist* s1,char val,int pos)
+{
+    if(s1->df!=3)
+    {
+        printf("Invalid data type!\n");
+        return;
+    }
+
+    if(s1->head==NULL)
+    {
+        s1->head= (node*)malloc(sizeof(node));
+        s1->head->data= (char*)malloc(sizeof(char));
+        *(char*)(s1->head->data)= val;
+        s1->head->next=NULL;
+        return;
+    }
+
+    if(pos==0)
+    {
+        node* newNode=malloc(sizeof(node));
+        newNode->data=(char*)malloc(sizeof(char));
+        *(char*)(newNode->data)= val;
+        newNode->next=s1->head;
+        s1->head=newNode;
+        printf("head");
+        return;
+    }
+
+    pos--;
+    node* ptr=NULL;
+    ptr=s1->head;
+
+    while(pos!=0 && ptr!=NULL)
+    {
+        ptr=ptr->next;
+        pos--;
+    }
+
+    if(ptr==NULL)
+    {
+        printf("pos not available!\n");
+        return;
+    }
+
+    node* newNode=malloc(sizeof(node));
+    newNode->data=(char*)malloc(sizeof(char));
+    *(char*)(newNode->data)= val;
     newNode->next = ptr->next;
     ptr->next=newNode;
 }
