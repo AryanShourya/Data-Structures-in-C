@@ -12,5 +12,5 @@ C is a low level programming language and it does not have its own data structur
 - [Stack](https://github.com/AryanShourya/Data-Structures-in-C/tree/main/Stack)
 - [Queue](https://github.com/AryanShourya/Data-Structures-in-C/tree/main/queue)
 - [Priority queue]()
-- [Linked List]()
+- [Linked List](https://github.com/AryanShourya/Data-Structures-in-C/tree/main/linked-list)
 
